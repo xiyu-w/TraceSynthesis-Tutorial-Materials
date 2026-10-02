@@ -1,16 +1,14 @@
 # TraceSynthesis Tutorial Materials
 
-These files accompany the *Behavior Research Methods* tutorial, **“Structured Information Extraction from Research Documents with Large Language Models: A Step-by-Step Tutorial with TraceSynthesis.”**
-
 **TraceSynthesis:** https://trace-synthesis-autoextraction.reviewtools.workers.dev/
 
-This repository contains the coding sheet used in the tutorial and two example output files generated with TraceSynthesis. The source articles are not included because I do not have permission to redistribute the PDFs. Full citations and DOI links are provided below so readers can locate the articles separately.
+TraceSynthesis is a browser-based application for structured LLM-assisted information extraction from research documents. This repository provides example materials for understanding and testing the workflow. It includes the coding sheet used in the examples and two exported result files produced with TraceSynthesis. These materials also accompany a submitted tutorial manuscript describing the workflow.
 
 ## Files
 
 ### `Coding_Sheet_TraceSynthesis_Ready.xlsx`
 
-This is the coding sheet used for the worked examples in the tutorial. It contains 37 coding items, including item names, definitions or instructions, response options where applicable, and single- or multiple-selection rules.
+This is the coding sheet used for the example extractions. It contains 37 coding items, including item names, definitions or instructions, response options where applicable, and single- or multiple-selection rules.
 
 ### `Sample_Result_1.xlsx`
 
@@ -26,36 +24,43 @@ Cao, X. (2024). Case study of China’s compulsory education system: AI apps and
 
 ### `documentation/TraceSynthesis_Tutorial_Materials_Guide.docx`
 
-A short guide to the files in this repository, the organization of the example workbooks, the software version used, and the source articles.
+A short guide to the files in this repository, the settings used to generate the example outputs, the organization of the exported workbooks, and the source articles.
 
-## Version and extraction settings
+## Trying the workflow
 
-The two sample output files were generated with **TraceSynthesis v4.3**.
+The coding sheet is provided so that readers can inspect the structure used in the examples and, if desired, use it when testing TraceSynthesis with documents they are authorized to use. Running an extraction requires the user's own API key from a supported model provider. API use is billed by the provider associated with that key.
 
-Because output can change with the model and extraction settings, the exact settings used for these examples should be reported with the archived files.
+The two sample workbooks are included as reference outputs. They show the type of information exported by TraceSynthesis and can be used alongside the tutorial when reviewing the extraction, evidence, and verification fields.
 
-| Setting | Sample Result 1 | Sample Result 2 |
-| --- | --- | --- |
-| TraceSynthesis version | 4.3 | 4.3 |
-| Model / provider | To be confirmed from the run record | To be confirmed from the run record |
-| Temperature | To be confirmed from the run record | To be confirmed from the run record |
-| Number of reads | To be confirmed from the run record | To be confirmed from the run record |
-| Coding items per request | To be confirmed from the run record | To be confirmed from the run record |
-| Optional background notes | To be confirmed from the run record | To be confirmed from the run record |
+## Version and settings used for the sample outputs
+
+Both sample outputs were generated with **TraceSynthesis v4.3, released October 1, 2026**, using the same settings:
+
+| Setting | Value |
+| --- | --- |
+| Model | GPT-4.1 |
+| Provider | OpenAI |
+| Document reading | Text + Table + Page Image |
+| Temperature | 0.2 |
+| Reads per study | 1 |
+| Coding items per request | 8 |
+| Other extraction settings | TraceSynthesis v4.3 defaults |
+
+These settings were the default extraction configuration in v4.3 except for the selected model and document-reading option described above.
 
 ## Reading the sample outputs
 
-Each example workbook contains several worksheets. The `results` sheet contains the main coding-item-level output. The other sheets retain additional information produced during extraction, including structured source records, numeric values, page coverage, definitions, and notes about the exported file.
+Each example workbook contains several worksheets. The `results` sheet contains the main coding-item-level output. The remaining sheets retain additional information produced during extraction, including structured source records, numeric values, page coverage, definitions, and notes about the exported file.
 
-These files are included as examples of TraceSynthesis output. They should not be treated as fully verified coded datasets unless the human-review fields show that a value has been checked.
+The sample files are provided as examples of the workflow and exported output. They should not be treated as fully verified coded datasets unless the human-review fields indicate that a value has been checked.
 
 ## Source articles
 
-The article PDFs are **not redistributed in this repository**. Readers can use the citations and DOI links above to obtain them from the publisher, a library, or another authorized source.
+The source PDFs are **not redistributed in this repository** because they are published articles that I do not have permission to redistribute. Readers can use the citations and DOI links above to obtain the articles from the publisher, a library, or another authorized source.
 
 ## Software updates
 
-TraceSynthesis is actively updated. Supported models and provider APIs may change over time, and later versions may also include changes intended to reduce processing time and API cost. The live application may therefore differ somewhat from v4.3, and rerunning the same documents with a later version or different model settings may not produce identical output.
+TraceSynthesis is actively updated. Supported models and provider APIs may change over time, and later versions may include changes intended to improve processing time, reduce API cost, or refine parts of the extraction workflow. For this reason, the live application may differ from v4.3, and rerunning the same task with a later release or different model settings may not produce identical output.
 
 The current application is available at:
 
@@ -63,4 +68,4 @@ https://trace-synthesis-autoextraction.reviewtools.workers.dev/
 
 ## Source code
 
-This repository contains the materials accompanying the tutorial. It does **not** contain the production source code or the development repository for TraceSynthesis.
+This repository contains materials for using and evaluating the workflow. It does **not** contain the production source code or the development repository for TraceSynthesis.
